@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 import Button from "./components/Button";
 import Header from "./components/Header";
 import SubHeader from "./components/SubHeader";
-import Carousel from "./components/Carousel";
+import Carousel from "./components/Carousel.jsx";
 
 function App() {
   return (

@@ -3,14 +3,14 @@ import "./font.css";
 const SubHeader = (props) => {
   const styleH = {
     color: props.color,
-    fontSize: "24px",
+    fontSize: props.SizeH,
     fontFamily: "Montserrat",
     fontWeight: "Bold",
   };
 
   const styleP = {
     color: props.color,
-    fontSize: "18px",
+    fontSize: props.SizeP,
     fontFamily: "Roboto",
     
   };

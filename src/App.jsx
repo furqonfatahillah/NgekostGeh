@@ -1,42 +1,73 @@
-import "./components/Nav.css";
-import "./App.css";
-import BerandaImage from "./assets/BerandaImg1.png";
-import Nav from "./components/Nav";
-import Button from "./components/Button";
-import Header from "./components/Header";
-import SubHeader from "./components/SubHeader";
-import Carousel from "./components/Carousel.jsx";
+import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RegistrasiPemilikKos from "./pages/RegistrasiPemilikKos";
+import RegistrasiPencariKos from "./pages/RegistrasiPencariKos";
+import EditKos from "./pages/EditKos.jsx";
+import EditProfilePencariKos from "./pages/EditProfilePencariKos.jsx";
+import EditProfilePemilikKos from "./pages/EditProfilePemilikKos.jsx";
+import VerifikasiPemilikKos from "./pages/verifikasiPemilikKos.jsx";
+import Rekomendasi from "./pages/Rekomendasi";
+import MetodePembayaran from "./pages/MetodePembayaran.jsx";
+import DetailKosanUser from "./pages/DetailKosanUser.jsx";
+import ProfilePemilikKos from "./pages/ProfilePemilikKos.jsx";
+import ProfilePencariKos from "./pages/ProfilePencariKos.jsx";
+import TambahKos from "./pages/TambahKos.jsx";
+import VerifikasiPencariKos from "./pages/verifikasiPencariKos.jsx";
 
 function App() {
   return (
     <>
-      <Nav></Nav>
-      <div className="content1">
-        <div className="header">
-          <Header
-            title="Mendapatkan Kos Yang Nyaman
-            Hanya Dengan Satu Sentuhan"
-            desk="Mendapatkan kos yang nyaman hanya dengan satu sentuhan 
-            dengan pesan kosan di Ngekost Geh! kamu akan dapatkan 
-            pelayanan terbaik untuk tempat tinggalmu
-            dimana saja dan kapan saja"
-          ></Header>
-          <br />
-          <Button name="Rekomendasi" width="180px"></Button>
-        </div>
-        <div className="img">
-          <img id="img-beranda" src={BerandaImage} alt="" />
-        </div>
-      </div>
-      <div className="info">
-        <Header title="+30" desk="Kecamatan"></Header>
-        <Header title="+500" desk="Kos"></Header>
-        <Header title="+1000" desk="Pelanggan"></Header>
-      </div>
-      <div className="content2">
-        <SubHeader title="Promo Kosan" color="white"></SubHeader>
-        <Carousel></Carousel>
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route
+            path="/RegistrasiPemilikKos"
+            element={<RegistrasiPemilikKos></RegistrasiPemilikKos>}
+          ></Route>
+          <Route
+            path="/RegistrasiPencariKos"
+            element={<RegistrasiPencariKos></RegistrasiPencariKos>}
+          ></Route>
+          <Route path="/EditKos" element={<EditKos></EditKos>}></Route>
+          <Route
+            path="/EditProfilePencariKos"
+            element={<EditProfilePencariKos></EditProfilePencariKos>}
+          ></Route>
+          <Route
+            path="/EditProfilePemilikKos"
+            element={<EditProfilePemilikKos></EditProfilePemilikKos>}
+          ></Route>
+          <Route
+            path="/verifikasiPemilikKos"
+            element={<VerifikasiPemilikKos></VerifikasiPemilikKos>}
+          ></Route>
+          <Route
+            path="/VerifikasiPencariKos"
+            element={<VerifikasiPencariKos></VerifikasiPencariKos>}
+          ></Route>
+          <Route
+            path="/Rekomendasi"
+            element={<Rekomendasi></Rekomendasi>}
+          ></Route>
+          <Route
+            path="/MetodePembayaran"
+            element={<MetodePembayaran></MetodePembayaran>}
+          ></Route>
+          <Route
+            path="/DetailKosanUser"
+            element={<DetailKosanUser></DetailKosanUser>}
+          ></Route>
+          <Route
+            path="/ProfilePemilikKos"
+            element={<ProfilePemilikKos></ProfilePemilikKos>}
+          ></Route>
+          <Route
+            path="/ProfilePencariKos"
+            element={<ProfilePencariKos></ProfilePencariKos>}
+          ></Route>
+          <Route path="/TambahKos" element={<TambahKos></TambahKos>}></Route>
+        </Routes>
+      </Router>
     </>
   );
 }

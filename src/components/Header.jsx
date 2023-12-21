@@ -3,10 +3,9 @@ import "./font.css";
 const Header = (props) => {
   const styleP = {
     fontSize: "20px",
-    lineHeight: "1.4em",
     fontFamily: "Roboto",
-    fontWeight: "400",
     color: "#50555d",
+    fontWeight: "500",
   };
 
   const styleH = {
